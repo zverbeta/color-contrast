@@ -1,10 +1,11 @@
-import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges, ChangeDetectionStrategy } from '@angular/core';
 import { ColorContrastService } from '../color-contrast.service';
 
 @Component({
   selector: 'app-color-contrast',
   templateUrl: './color-contrast.component.html',
-  styleUrls: ['./color-contrast.component.css']
+  styleUrls: ['./color-contrast.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ColorContrastComponent implements OnInit {
   @Input() colorText: any = {

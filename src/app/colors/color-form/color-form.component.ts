@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs/internal/Observable';
 import { map, startWith, tap } from 'rxjs/internal/operators';
@@ -7,7 +7,8 @@ import { merge } from 'rxjs/internal/observable/merge';
 @Component({
   selector: 'app-color-form',
   templateUrl: './color-form.component.html',
-  styleUrls: ['./color-form.component.css']
+  styleUrls: ['./color-form.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ColorFormComponent implements OnInit {
   @Input() colorSchemas: any;
