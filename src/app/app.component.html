@@ -1,21 +1,9 @@
-<div class="header">
-  <div fxLayout="row wrap" fxLayoutGap="20px">
-    <div fxFlex="1 0 auto">
-      <a href="http://a3.kyiv.ua">
-        <img src="https://cdn.a3.kyiv.ua/logo/a3-logo-small-black.svg" width="35" height="35" alt="A3">
-        <span>Агенти змін</span>
-      </a>
-    </div>
-    <div fxFlex="0 1 auto">
-      <a href="#">English</a>
-    </div>
-  </div>
-</div>
 <mat-sidenav-container class="container">
-  <mat-sidenav-content class="content">
-    <app-colors></app-colors>
+  <mat-sidenav-content>
+    <app-header></app-header>
+    <div class="content">
+      <app-colors></app-colors>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
-<div class="footer">
-  asd
-</div>
+<app-footer></app-footer>

@@ -8,6 +8,8 @@ import {MatIconRegistry, MatSidenavModule} from '@angular/material';
 import { AppComponent } from './app.component';
 import { ColorsModule } from './colors/colors.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { HeaderModule } from './header/header.module';
+import { FooterModule } from './footer/footer.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     HttpClientModule,
     FlexLayoutModule,
     MatSidenavModule,
+    HeaderModule,
+    FooterModule,
     ColorsModule
   ],
   providers: [],

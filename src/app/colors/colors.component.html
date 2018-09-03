@@ -1,4 +1,7 @@
-<div class="heading">Контраст цветов</div>
+<div class="heading">
+  <h3 class="heading-title">Контраст цветов</h3>
+  <sup>&beta;</sup>
+</div>
 <div fxLayout="row wrap" fxLayoutGap="20px">
   <div fxFlex="calc(50% - 20px)">
     <app-color-form [colorSchemas]="schemas$ | async" (selectedSchemas)="selectSchemaColors($event)" (selectedColors)="selectColors($event)"></app-color-form>

@@ -1,0 +1,17 @@
+:host {
+  max-width: 1200px;
+  display: block;
+  margin: 0 auto 3em;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.logo span {
+  padding-left: 10px;
+}

@@ -24,7 +24,7 @@ export class ColorContrastComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log(this.colorText);
+    
   }
 
   ngOnChanges(changes: SimpleChanges) {
