@@ -48,3 +48,22 @@ body {
   background-color: #F9F9F9;
   color: #0D0D0D;
 }
+
+a {
+  text-decoration: none;
+  color: #0EC269;
+  border-bottom: 1px solid;
+  border-bottom-color: rgba(14,194,105,0.2);
+}
+
+a:hover{
+  color: #0FDC77;
+  border-bottom-color: rgba(15,200,120,0.2);
+  text-decoration: none;
+}
+
+a:active{
+  color: #FF5B3B;
+  text-decoration: none;
+  border-bottom-color: rgba(255,90,60,0.2);
+}
