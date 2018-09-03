@@ -13,13 +13,13 @@
 
 <div fxLayout="row wrap" fxLayoutGap="20px">
   <div fxFlex="calc(50% - 20px)">
-    <div class="closest-color-box" *ngFor="let color of closetsForColorText">
+    <div class="closest-color-box" *ngFor="let color of closetsForColorText" (click)="changeSelectedTextColor(color)">
       <app-color-box-preview [colorCode]="color.code" [colorHex]="color.hex"></app-color-box-preview>
     </div>
   </div>
   
    <div fxFlex="calc(50% - 20px)">
-    <div class="closest-color-box" *ngFor="let color of closetsForColorBackground">
+    <div class="closest-color-box" *ngFor="let color of closetsForColorBackground" (click)="changeSelectedBackgroundColor(color)">
       <app-color-box-preview [colorCode]="color.code" [colorHex]="color.hex"></app-color-box-preview>
     </div>
   </div>

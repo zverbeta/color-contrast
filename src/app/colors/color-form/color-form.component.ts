@@ -12,6 +12,8 @@ import { merge } from 'rxjs/internal/observable/merge';
 })
 export class ColorFormComponent implements OnInit, OnChanges {
   @Input() colorSchemas = [];
+  @Input() selectColorText: any;
+  @Input() selectColorBackground: any;
 
   colorSchema: FormControl = new FormControl('');
   colorText: FormControl = new FormControl('');
@@ -59,6 +61,14 @@ export class ColorFormComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges) {
     if (this.colorSchemas && this.colorSchemas.length > 1) {
       this.colorSchema.setValue(this.colorSchemas[0]);
+    }
+
+    if (this.selectColorText) {
+      this.colorText.setValue(this.selectColorText);
+    }
+
+    if (this.selectColorBackground) {
+      this.colorBackground.setValue(this.selectColorBackground);
     }
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, SimpleChanges, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges, ChangeDetectionStrategy, Output, EventEmitter } from '@angular/core';
 import { ColorContrastService } from '../color-contrast.service';
 
 @Component({
@@ -15,6 +15,9 @@ export class ColorContrastComponent implements OnInit {
     hex: ''
   };
   @Input() colorList = [];
+
+  @Output() changedSelectedTextColor: EventEmitter<any> = new EventEmitter<any>();
+  @Output() changedSelectedBackgroundColor: EventEmitter<any> = new EventEmitter<any>();
 
   colorContrastDiff = 0;
   closetsForColorText = [];
@@ -36,4 +39,11 @@ export class ColorContrastComponent implements OnInit {
     }
   }
 
+  changeSelectedTextColor(color) {
+    this.changedSelectedTextColor.emit(color);
+  }
+
+  changeSelectedBackgroundColor(color) {
+    this.changedSelectedBackgroundColor.emit(color);
+  }
 }

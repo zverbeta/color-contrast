@@ -14,6 +14,9 @@ export class ColorsComponent implements OnInit {
   colorBackground: any;
   colorList: any;
 
+  selectColorText: any;
+  selectColorBackground: any;
+
   constructor(
     private colorSchemaService: ColorSchemaService
   ) {
@@ -31,5 +34,13 @@ export class ColorsComponent implements OnInit {
 
   selectSchemaColors(schemaColors) {
     this.colorList = schemaColors;
+  }
+
+  changeSelectedTextColor(color) {
+    this.selectColorText = color;
+  }
+
+  changeSelectedBackgroundColor(color) {
+    this.selectColorBackground = color;
   }
 }

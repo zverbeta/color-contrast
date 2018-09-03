@@ -4,9 +4,19 @@
 </div>
 <div fxLayout="row wrap" fxLayoutGap="20px">
   <div fxFlex="calc(50% - 20px)">
-    <app-color-form [colorSchemas]="schemas$ | async" (selectedSchemas)="selectSchemaColors($event)" (selectedColors)="selectColors($event)"></app-color-form>
+    <app-color-form 
+    [selectColorText]="selectColorText"
+    [selectColorBackground]="selectColorBackground"
+    [colorSchemas]="schemas$ | async" 
+    (selectedSchemas)="selectSchemaColors($event)" 
+    (selectedColors)="selectColors($event)"></app-color-form>
   </div>
   <div fxFlex="calc(50% - 20px)">
-    <app-color-contrast [colorList]="colorList" [colorText]="colorText" [colorBackground]="colorBackground"></app-color-contrast>
+    <app-color-contrast 
+      (changedSelectedTextColor)="changeSelectedTextColor($event)"
+      (changedSelectedBackgroundColor)="changeSelectedBackgroundColor($event)"
+      [colorList]="colorList" 
+      [colorText]="colorText" 
+      [colorBackground]="colorBackground"></app-color-contrast>
   </div>
 </div>
