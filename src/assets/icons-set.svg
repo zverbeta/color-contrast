@@ -1,0 +1,67 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <symbol id="about" viewBox="0 0 24 24">
+      <title>about</title>
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" stroke-opacity="0.595504982" stroke="#0EC269" stroke-width="2.25" cx="10" cy="10" r="8.875"></circle>
+        <rect id="Rectangle-8" fill="#0EC269" x="9" y="9" width="2" height="6"></rect>
+        <circle id="Oval-2" fill="#0EC269" cx="10" cy="6" r="1.5"></circle>
+      </g>
+    </symbol>
+    <symbol id="github" viewBox="0 0 24 24">
+      <title>github</title>
+      <path
+        d="M12 0.297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385 0.6 0.113 0.82-0.258 0.82-0.577 0-0.285-0.010-1.040-0.015-2.040-3.338 0.724-4.042-1.61-4.042-1.61-0.546-1.385-1.335-1.755-1.335-1.755-1.087-0.744 0.084-0.729 0.084-0.729 1.205 0.084 1.838 1.236 1.838 1.236 1.070 1.835 2.809 1.305 3.495 0.998 0.108-0.776 0.417-1.305 0.76-1.605-2.665-0.3-5.466-1.332-5.466-5.93 0-1.31 0.465-2.38 1.235-3.22-0.135-0.303-0.54-1.523 0.105-3.176 0 0 1.005-0.322 3.3 1.23 0.96-0.267 1.98-0.399 3-0.405 1.020 0.006 2.040 0.138 3 0.405 2.28-1.552 3.285-1.23 3.285-1.23 0.645 1.653 0.24 2.873 0.12 3.176 0.765 0.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92 0.42 0.36 0.81 1.096 0.81 2.22 0 1.606-0.015 2.896-0.015 3.286 0 0.315 0.21 0.69 0.825 0.57 4.801-1.574 8.236-6.074 8.236-11.369 0-6.627-5.373-12-12-12z"></path>
+    </symbol>
+    <symbol id="sad" viewBox="0 0 24 24">
+      <title>sad</title>
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" stroke="#DE4B2C" stroke-width="1.5" cx="10" cy="10" r="9.25"></circle>
+        <circle id="Oval-2" fill="#DE4B2C" cx="7.5" cy="7.5" r="1.25"></circle>
+        <circle id="Oval-2" fill="#DE4B2C" cx="12.5" cy="7.5" r="1.25"></circle>
+        <path d="M6.5,13 C8.6875,11.6666667 11.3125,11.6666667 13.5,13" id="Path-2" stroke="#DE4B2C" stroke-width="1.5"></path>
+      </g>
+    </symbol>
+    <symbol id="sad2" viewBox="0 0 24 24">
+      <title>sad2</title>
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" stroke="#DE4B2C" stroke-width="2.25" cx="10" cy="10" r="8.875"></circle>
+        <circle id="Oval-2" fill="#DE4B2C" cx="7.5" cy="7.5" r="1.5"></circle>
+        <circle id="Oval-2" fill="#DE4B2C" cx="12.5" cy="7.5" r="1.5"></circle>
+        <path d="M6.5,13 C8.6875,11.6666667 11.3125,11.6666667 13.5,13" id="Path-2" stroke="#DE4B2C" stroke-width="2.25"></path>
+      </g>
+    </symbol>
+    <symbol id="smile" viewBox="0 0 24 24">
+      <title>smile</title>
+      <g id="smile-smile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" stroke="#76C526" stroke-width="1.5" cx="10" cy="10" r="9.25"></circle>
+        <circle id="Oval-2" fill="#7FC834" cx="7.5" cy="7.5" r="1.25"></circle>
+        <circle id="Oval-2" fill="#7FC834" cx="12.5" cy="7.5" r="1.25"></circle>
+        <path d="M6.5,13 C8.6875,11.6666667 11.3125,11.6666667 13.5,13" id="Path-2" stroke="#76C526" stroke-width="1.5" transform="translate(10.000000, 12.500000) scale(1, -1) translate(-10.000000, -12.500000) "></path>
+      </g>
+    </symbol>
+    <symbol id="smile2" viewBox="0 0 24 24">
+      <title>smile2</title>
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g stroke="#76C526" stroke-width="2.25">
+          <g>
+            <circle id="Oval" cx="10" cy="10" r="8.875"></circle>
+            <path d="M6.5,13 C8.6875,11.6666667 11.3125,11.6666667 13.5,13" id="Path-2" transform="translate(10.000000, 12.500000) scale(1, -1) translate(-10.000000, -12.500000) "></path>
+          </g>
+        </g>
+        <circle id="Oval-2" fill="#76C526" cx="7.5" cy="7.5" r="1.5"></circle>
+        <circle id="Oval-2" fill="#76C526" cx="12.5" cy="7.5" r="1.5"></circle>
+      </g>
+    </symbol>
+    <symbol id="mail" viewBox="0 0 24 24">
+      <title>mail</title>
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g fill="#000000">
+          <polygon id="Combined-Shape" points="12 3 12 10 0 10 0 3 6 7"></polygon>
+          <polygon id="Rectangle" points="0 2 12 2 6 6"></polygon>
+        </g>
+      </g>
+    </symbol>
+  </defs>
+</svg>
