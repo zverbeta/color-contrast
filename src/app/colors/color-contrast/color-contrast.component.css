@@ -1,0 +1,7 @@
+.preview {
+  display: flex;
+  height: 170px;
+  align-items: center;
+  font-size: 70px;
+  justify-content: center;
+}

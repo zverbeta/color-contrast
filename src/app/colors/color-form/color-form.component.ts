@@ -1,7 +1,7 @@
-import { Component, OnInit, Input, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs/internal/Observable';
-import { map, startWith } from 'rxjs/internal/operators';
+import { map, startWith, tap } from 'rxjs/internal/operators';
 import { merge } from 'rxjs/internal/observable/merge';
 
 @Component({
@@ -20,13 +20,17 @@ export class ColorFormComponent implements OnInit {
   selectedColorText$: Observable<any>;
   selectedColorBackground$: Observable<any>;
 
-  selectedColors: EventEmitter<any> = new EventEmitter<any>();
+  @Output() selectedColors: EventEmitter<any> = new EventEmitter<any>();
+  @Output() selectedSchemas: EventEmitter<any> = new EventEmitter<any>();
 
   constructor(
   ) { }
 
   ngOnInit() {
-    this.selectedColorSchema$ = this.colorSchema.valueChanges.pipe(map(schema => schema.colors));
+    this.selectedColorSchema$ = this.colorSchema.valueChanges.pipe(
+      map(schema => schema.colors),
+      tap((selectedSchemaColors) => this.selectedSchemas.next(selectedSchemaColors))
+    );
     this.selectedColorText$ = this.colorText.valueChanges.pipe(map(color => color));
     this.selectedColorBackground$ = this.colorBackground.valueChanges.pipe(map(color => color));
 
@@ -39,11 +43,8 @@ export class ColorFormComponent implements OnInit {
       }))
     ).subscribe(({colorText, colorBackground}) => {
       if (colorText && colorBackground) {
-        console.log(colorText, colorBackground)
-       
+        this.selectedColors.emit({colorText, colorBackground});
       }
-
-      
     });
   }
 }

@@ -10,6 +10,10 @@ import { Observable } from 'rxjs/internal/Observable';
 export class ColorsComponent implements OnInit {
   schemas$: Observable<any>;
 
+  colorText: any;
+  colorBackground: any;
+  colorList: any;
+
   constructor(
     private colorSchemaService: ColorSchemaService
   ) {
@@ -20,8 +24,12 @@ export class ColorsComponent implements OnInit {
     this.schemas$ = this.colorSchemaService.loadColorSchemas();
   }
 
-  selectColors(a) {
-    console.log(a);
+  selectColors({colorText, colorBackground}) {
+    this.colorText = colorText;
+    this.colorBackground = colorBackground;
   }
 
+  selectSchemaColors(schemaColors) {
+    this.colorList = schemaColors;
+  }
 }

@@ -1,3 +1,18 @@
-<p>
-  color-contrast works!
-</p>
+
+<ng-container *ngIf="(colorText && colorText.hex) && (colorBackground && colorBackground.hex)">
+  <div class="preview" [ngStyle]="{'color': colorText.hex, 'background-color': colorBackground.hex}">Текст</div>
+</ng-container>
+
+Контраст {{colorContrastDiff}} <mat-icon [svgIcon]="colorContrastDiff > 70 ? 'smile' : 'sad'"></mat-icon>
+
+Для кращої розпізнаваності зробіть контраст між тлом та текстом не менше 70%
+
+<div fxLayout="row wrap" fxLayoutGap="20px">
+  <mat-list fxFlex="calc(50% - 20px)">
+    <mat-list-item *ngFor="let color of closetsForColorText"> {{color.hex}} </mat-list-item>
+   </mat-list>
+  
+   <mat-list fxFlex="calc(50% - 20px)">
+    <mat-list-item *ngFor="let color of closetsForColorBackground"> {{color.hex}} </mat-list-item>
+   </mat-list>
+</div>

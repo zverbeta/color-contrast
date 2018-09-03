@@ -33,4 +33,17 @@ export class ColorContrastService {
   compareDistance(colorA, colorB, baseColor) {
     return this.colorDistance(colorA, baseColor) - this.colorDistance(colorB, baseColor);
   }
+
+  getClosetsColors(colorList, forColor) {
+    let min = this.getSmalestContrast(forColor.lvrNumeric);
+    let max = this.getBiggestContrast(forColor.lvrNumeric);
+
+    const closestColors = colorList.filter(function(c){
+      return (c.lvrNumeric <= min || c.lvrNumeric >= max) && typeof c.lvrNumeric === "number";
+    }).sort((a, b) => {
+      return this.compareDistance(a.rgb, b.rgb, forColor.rgb);
+    }).slice(0, 3);
+
+    return closestColors;
+  }
 }
