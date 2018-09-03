@@ -9,10 +9,20 @@
 
 <div fxLayout="row wrap" fxLayoutGap="20px">
   <mat-list fxFlex="calc(50% - 20px)">
-    <mat-list-item *ngFor="let color of closetsForColorText"> {{color.hex}} </mat-list-item>
+    <mat-list-item *ngFor="let color of closetsForColorText">
+      <div fxLayout="row wrap" fxLayoutAlign="start center">
+        <span [ngStyle]="{'display': 'block', 'margin-right': '15px', 'width': '25px', 'height': '25px', 'background-color': color.hex}"></span>
+        <span>{{color.code}}</span>
+      </div>  
+    </mat-list-item>
    </mat-list>
   
    <mat-list fxFlex="calc(50% - 20px)">
-    <mat-list-item *ngFor="let color of closetsForColorBackground"> {{color.hex}} </mat-list-item>
+    <mat-list-item *ngFor="let color of closetsForColorBackground">
+      <div fxLayout="row wrap" fxLayoutAlign="start center">
+        <span [ngStyle]="{'display': 'block', 'margin-right': '15px', 'width': '25px', 'height': '25px', 'background-color': color.hex}"></span>
+        <span>{{color.code}}</span>
+      </div>
+    </mat-list-item>
    </mat-list>
 </div>
