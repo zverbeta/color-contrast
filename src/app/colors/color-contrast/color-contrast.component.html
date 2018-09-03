@@ -1,11 +1,15 @@
-
 <ng-container *ngIf="(colorText && colorText.hex) && (colorBackground && colorBackground.hex)">
   <div class="preview" [ngStyle]="{'color': colorText.hex, 'background-color': colorBackground.hex}">Текст</div>
 </ng-container>
 
-Контраст {{colorContrastDiff}} <mat-icon [svgIcon]="colorContrastDiff > 70 ? 'smile' : 'sad'"></mat-icon>
+<div class="contrast">
+  <span class="contrast-percentage">Контраст {{colorContrastDiff}}</span>
+  <mat-icon [svgIcon]="colorContrastDiff > 70 ? 'smile' : 'sad'"></mat-icon>
+</div>
 
-Для кращої розпізнаваності зробіть контраст між тлом та текстом не менше 70%
+<div class="comment">
+  Для кращої розпізнаваності зробіть контраст між тлом та текстом не менше 70%
+</div>
 
 <div fxLayout="row wrap" fxLayoutGap="20px">
   <mat-list fxFlex="calc(50% - 20px)">

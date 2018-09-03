@@ -4,4 +4,28 @@
   align-items: center;
   font-size: 70px;
   justify-content: center;
+  margin-bottom: 10px;
+}
+
+.comment {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #373A3C;
+  letter-spacing: 0;
+  text-align: left;
+  line-height: 1.35rem;
+}
+
+.contrast {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.contrast-percentage {
+  font-size: 22px;
+  font-weight: 700;
+  color: #373A3C;
+  letter-spacing: 0;
+  margin-right: 5px;
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, EventEmitter, Output, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output, ChangeDetectionStrategy, OnChanges, SimpleChange, SimpleChanges } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs/internal/Observable';
 import { map, startWith, tap } from 'rxjs/internal/operators';
@@ -10,8 +10,8 @@ import { merge } from 'rxjs/internal/observable/merge';
   styleUrls: ['./color-form.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ColorFormComponent implements OnInit {
-  @Input() colorSchemas: any;
+export class ColorFormComponent implements OnInit, OnChanges {
+  @Input() colorSchemas = [];
 
   colorSchema: FormControl = new FormControl('');
   colorText: FormControl = new FormControl('');
@@ -30,8 +30,15 @@ export class ColorFormComponent implements OnInit {
   ngOnInit() {
     this.selectedColorSchema$ = this.colorSchema.valueChanges.pipe(
       map(schema => schema.colors),
-      tap((selectedSchemaColors) => this.selectedSchemas.next(selectedSchemaColors))
-    );
+      tap((selectedSchemaColors) => {
+        if (selectedSchemaColors.length > 1) {
+          this.colorText.setValue(selectedSchemaColors[0]);
+          this.colorBackground.setValue(selectedSchemaColors[0]);
+        }
+
+        this.selectedSchemas.next(selectedSchemaColors)
+      })
+    )
     this.selectedColorText$ = this.colorText.valueChanges.pipe(map(color => color));
     this.selectedColorBackground$ = this.colorBackground.valueChanges.pipe(map(color => color));
 
@@ -47,5 +54,11 @@ export class ColorFormComponent implements OnInit {
         this.selectedColors.emit({colorText, colorBackground});
       }
     });
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (this.colorSchemas && this.colorSchemas.length > 1) {
+      this.colorSchema.setValue(this.colorSchemas[0]);
+    }
   }
 }
