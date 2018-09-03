@@ -10,6 +10,7 @@ import { ColorsModule } from './colors/colors.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HeaderModule } from './header/header.module';
 import { FooterModule } from './footer/footer.module';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FooterModule } from './footer/footer.module';
   ],
   imports: [
     BrowserAnimationsModule,
+    AppRoutingModule,
     HttpClientModule,
     FlexLayoutModule,
     MatSidenavModule,

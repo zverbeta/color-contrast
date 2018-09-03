@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ColorSchemaService } from './color-schema.service';
 import { Observable } from 'rxjs/internal/Observable';
 
@@ -18,6 +19,7 @@ export class ColorsComponent implements OnInit {
   selectColorBackground: any;
 
   constructor(
+    private route: ActivatedRoute,
     private colorSchemaService: ColorSchemaService
   ) {
 
@@ -25,6 +27,12 @@ export class ColorsComponent implements OnInit {
 
   ngOnInit() {
     this.schemas$ = this.colorSchemaService.loadColorSchemas();
+
+    this.route.queryParamMap.subscribe((queryParamMap) => {
+      const palleteId = +queryParamMap.get('palleteId');
+      const bgColorId = +queryParamMap.get('bgColorId');
+      const textColorId = +queryParamMap.get('textColorId');
+    })
   }
 
   selectColors({colorText, colorBackground}) {
