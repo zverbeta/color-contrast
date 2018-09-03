@@ -58,8 +58,8 @@
       <title>mail</title>
       <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g fill="#000000">
-          <polygon id="Combined-Shape" points="12 3 12 10 0 10 0 3 6 7"></polygon>
-          <polygon id="Rectangle" points="0 2 12 2 6 6"></polygon>
+          <polygon points="12 3 12 10 0 10 0 3 6 7"></polygon>
+          <polygon points="0 2 12 2 6 6"></polygon>
         </g>
       </g>
     </symbol>
