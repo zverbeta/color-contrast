@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { ColorContrastComponent } from './color-contrast.component';
 import { MatIconModule, MatListModule, MatDividerModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ColorBoxPreviewModule } from '../shared/color-box-preview/color-box-preview.module';
 
 @NgModule({
   imports: [
     CommonModule,
     MatIconModule,
     MatListModule,
+    ColorBoxPreviewModule,
     MatDividerModule,
     FlexLayoutModule
   ],

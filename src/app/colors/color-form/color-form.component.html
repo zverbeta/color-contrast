@@ -11,10 +11,7 @@
       <mat-form-field>
         <mat-select placeholder="Color text" [formControl]="colorText">
           <mat-option [value]="color" *ngFor="let color of selectedColorSchema$ | async">
-            <div fxLayout="row wrap" fxLayoutAlign="start center">
-              <span [ngStyle]="{'display': 'block', 'margin-right': '15px', 'width': '25px', 'height': '25px', 'background-color': color.hex}"></span>
-              <span>{{color.code}}</span>
-            </div>
+            <app-color-box-preview [colorCode]="color.code" [colorHex]="color.hex"></app-color-box-preview>
           </mat-option>
         </mat-select>
       </mat-form-field>
@@ -24,10 +21,7 @@
       <mat-form-field>
         <mat-select placeholder="Color background" [formControl]="colorBackground">
           <mat-option [value]="color" *ngFor="let color of selectedColorSchema$ | async">
-            <div fxLayout="row wrap" fxLayoutAlign="start center">
-              <span [ngStyle]="{'display': 'block', 'margin-right': '15px', 'width': '25px', 'height': '25px', 'background-color': color.hex}"></span>
-              <span>{{color.code}}</span>
-            </div>
+            <app-color-box-preview [colorCode]="color.code" [colorHex]="color.hex"></app-color-box-preview>
           </mat-option>
         </mat-select>
       </mat-form-field>

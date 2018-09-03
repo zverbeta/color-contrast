@@ -6,6 +6,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { ColorDetailsModule } from '../color-details/color-details.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ColorBoxPreviewModule } from '../shared/color-box-preview/color-box-preview.module';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     FlexLayoutModule,
     MatFormFieldModule,
     MatSelectModule,
-    ColorDetailsModule
+    ColorDetailsModule,
+    ColorBoxPreviewModule
   ],
   declarations: [ColorFormComponent],
   exports: [ColorFormComponent]
