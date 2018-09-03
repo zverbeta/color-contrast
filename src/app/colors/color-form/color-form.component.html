@@ -1,0 +1,35 @@
+<div fxLayout="column" fxLayoutGap="20px">
+  <mat-form-field>
+    <mat-select placeholder="Color scheme" [formControl]="colorSchema">
+      <mat-option [value]="colorSchema" *ngFor="let colorSchema of colorSchemas; let i = index">
+        {{colorSchema.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <div fxLayout="row wrap" fxLayoutGap="20px">
+    <div fxFlex="calc(50% - 20px)">
+      <mat-form-field>
+        <mat-select placeholder="Color text" [formControl]="colorText">
+          <mat-option [value]="color" *ngFor="let color of selectedColorSchema$ | async">
+            {{color.id}}
+            {{color.hex}}
+            {{color.code}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <app-color-details [color]="selectedColorText$ | async"></app-color-details>
+    </div>
+    <div fxFlex="calc(50% - 20px)">
+      <mat-form-field>
+        <mat-select placeholder="Color background" [formControl]="colorBackground">
+          <mat-option [value]="color" *ngFor="let color of selectedColorSchema$ | async">
+            {{color.id}}
+            {{color.hex}}
+            {{color.code}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <app-color-details [color]="selectedColorBackground$ | async"></app-color-details>
+    </div>
+  </div>
+</div>

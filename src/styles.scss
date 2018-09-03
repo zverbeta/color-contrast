@@ -9,3 +9,37 @@ $app-warn: mat-palette($mat-red);
 $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
 
 @include angular-material-theme($app-theme);
+
+@font-face {
+  font-family: 'proba_nav2';
+  src: url('https://cdn.a3.kyiv.ua/ProbaNav2.1/probanav2-regular-webfont.eot');
+  src: url('https://cdn.a3.kyiv.ua/ProbaNav2.1/probanav2-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('https://cdn.a3.kyiv.ua/ProbaNav2.1/probanav2-regular-webfont.woff2') format('woff2'),
+  url('https://cdn.a3.kyiv.ua/ProbaNav2.1/probanav2-regular-webfont.woff') format('woff'),
+  url('https://cdn.a3.kyiv.ua/ProbaNav2.1/probanav2-regular-webfont.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'proba_nav2';
+  src: url('https://cdn.a3.kyiv.ua/ProbaNav2.1/probanav2-bold-webfont.eot');
+  src: url('https://cdn.a3.kyiv.ua/ProbaNav2.1/probanav2-bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('https://cdn.a3.kyiv.ua/ProbaNav2.1/probanav2-bold-webfont.woff2') format('woff2'),
+  url('https://cdn.a3.kyiv.ua/ProbaNav2.1/probanav2-bold-webfont.woff') format('woff'),
+  url('https://cdn.a3.kyiv.ua/ProbaNav2.1/probanav2-bold-webfont.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body, p, div, h1, h2, h3, h4, h5, h6, span {
+  font-family: 'proba_nav2', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #F9F9F9;
+  color: #0D0D0D;
+}

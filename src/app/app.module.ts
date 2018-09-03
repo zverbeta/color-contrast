@@ -3,9 +3,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
-import { MatIconRegistry } from '@angular/material';
+import {MatIconRegistry, MatSidenavModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
+import { ColorsModule } from './colors/colors.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,10 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    FlexLayoutModule,
+    MatSidenavModule,
+    ColorsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

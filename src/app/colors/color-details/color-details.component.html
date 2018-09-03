@@ -1,0 +1,4 @@
+<div fxLayout="row wrap" *ngFor="let kv of color | keyvalue">
+  <span fxFlex="25%" class="caption">{{kv.key | colorModel}}</span>
+  <span fxFlex="1 0 auto" class="value">{{kv.value}}</span>
+</div>
