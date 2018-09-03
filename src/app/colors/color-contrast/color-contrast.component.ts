@@ -33,7 +33,14 @@ export class ColorContrastComponent implements OnInit {
 
   ngOnChanges(changes: SimpleChanges) {
     if (this.colorText && this.colorBackground) {
-      this.colorContrastDiff = this.colorContrastService.getContrastDifference(this.colorText.lvrNumeric, this.colorBackground.lvrNumeric);
+      const colorContrastDiff = this.colorContrastService.getContrastDifference(this.colorText.lvrNumeric, this.colorBackground.lvrNumeric);
+
+      if (isNaN(colorContrastDiff)) {
+        this.colorContrastDiff = 0;
+      } else {
+        this.colorContrastDiff = colorContrastDiff;
+      }
+
       this.closetsForColorText = this.colorContrastService.getClosetsColors(this.colorList, this.colorText);
       this.closetsForColorBackground = this.colorContrastService.getClosetsColors(this.colorList, this.colorBackground);
     }
