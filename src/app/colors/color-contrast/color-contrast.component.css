@@ -29,3 +29,13 @@
   letter-spacing: 0;
   margin-right: 5px;
 }
+
+.closest-color-box {
+  cursor: pointer;
+  display: flex;
+  margin-bottom: 5px;
+  font-size: 15px;
+  padding: 5px;
+  border-radius: 0.25rem;
+  border: 1px solid hsl(0, 0%, 80%);
+}

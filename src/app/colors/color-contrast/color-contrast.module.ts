@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ColorContrastComponent } from './color-contrast.component';
-import { MatIconModule, MatListModule, MatDividerModule } from '@angular/material';
+import { MatIconModule, MatDividerModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ColorBoxPreviewModule } from '../shared/color-box-preview/color-box-preview.module';
 
@@ -9,7 +9,6 @@ import { ColorBoxPreviewModule } from '../shared/color-box-preview/color-box-pre
   imports: [
     CommonModule,
     MatIconModule,
-    MatListModule,
     ColorBoxPreviewModule,
     MatDividerModule,
     FlexLayoutModule

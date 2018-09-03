@@ -4,3 +4,10 @@
   height: 25px;
   margin-right: 15px;
 }
+
+.code {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-top: 3px;
+}
